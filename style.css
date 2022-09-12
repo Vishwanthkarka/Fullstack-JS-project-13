@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
+:root{
+    --primary:#542795;
+    --secondary:#5ba0e0;
+    --white :white;
+    --bg-01:rgba(245,56,6, .2);
+    --bg-02:rgba(255, 193, 58, 0.2);
+    --bg-03:rgba(101, 255, 58, 0.2);
+    --bg-04:rgba(235, 58, 255, 0.2);
+}
+*{
+    margin:0px;
+    padding:0px;
+    
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+.container{
+   background: var(--primary);
+}
+
+header {
+display: flex;
+justify-content: space-between;
+height: 15vh;
+align-items: center;
+margin: 0px 20px 0px 20px;
+}
+header ul{
+    display: flex;
+    list-style: none;
+gap:40px;
+    justify-content: space-between;
+}
+header ul a{
+    color:var(--white) ;
+    text-decoration: none;
+}
+header div{
+    flex: 2;
+}
+header div img {
+width:80px;
+height: 50px;
+}
+.mobile-nav{
+    display: none;
+}
+.btn{
+    background-color: var(--secondary);
+    border: none;
+    border-radius: 8px;
+    color: var(--white);
+    padding: 12px 30px;
+    text-transform:uppercase;
+    margin-left: 20px;
+}
+
+.hero{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   margin: auto;
+   padding: 50px 0px 70px 0px;
+}
+.hero .img-class img{
+ width: 650px;
+}
+
+.hero .hero-text h2{
+font-size: 3rem;
+font-weight: bold;
+color: var(--white);
+line-height: 50px;
+}
+
+.hero .hero-text p{
+    color: var(--white);
+    margin: 20px 0px 20px 0px;
+}
+
+@media screen and (max-width:1030px) {
+    .hero .img-class img{
+        width: 500px;
+    }
+    .hero .hero-text h2{
+        font-size: 2.5rem;
+    }
+    .hero .hero-text p{
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (max-width:980px) {
+    .hero{
+        flex-wrap: wrap;
+    }
+    .hero .img-class {
+       order: -2;
+       margin: auto;
+    }
+    .hero .hero-text{
+        margin: auto;
+        text-align: center;
+    }
+}
+@media only screen and (max-width:750px) {
+    header ul{
+        display: none;
+    }
+    header button{
+        display: none;
+    }
+    .mobile-nav{
+        display: block;
+        font-size: 2rem;
+        color: var(--white);
+    }
+    header div{
+        flex: 0;
+    }
+    
+}
+@media only screen and (max-width:550px) {
+
+    .hero .img-class {
+   position: absolute;
+   opacity: .2;
+   top:20px;
+   left:20px;
+   margin: auto;
+
+    }
+    .hero .img-class img{
+        width: 350px;
+    }
+    .hero .hero-text h2{
+font-size: 2rem;
+    }
+}
+@media only screen and (max-width:400px) {
+   .hero .img-class img{
+    width: 20rem;
+   } 
+}
+
+/* operating system */
+.operating-system{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+   margin: auto;
+}
+.operating-system .os-img-div img{
+    width:35rem;
+    
+}
+.os-feature h3{
+    font-size: 2rem;
+    margin: 20px 0px 20px 0px;
+}
+.os-feature h5{
+    font-size: 1rem;
+    margin: 20px 0px 20px 0px;
+}
+
+@media only screen and (max-width:980px) {
+    .operating-system{
+     flex-direction: column;
+     justify-content: center;
+    }
+    .operating-system .os-img-div img{
+        width:20rem;
+        
+    }
+    .os-feature h5{
+        font-size: 1rem;
+    }
+    .os-feature h3{
+        font-size: 1.5rem;
+    }
+    .os-feature{
+        margin: auto;
+    }
+}
+
+/* feature  */
+.feature h2{
+font-size: 2rem;
+text-align: center;
+margin:20px 0px 20px 0;
+}
+.featuer-img img{
+    width: 3rem;
+}
+.featuer-img{
+display: flex;
+height:100px;
+width: 100px;
+border-radius: 50%;
+justify-content: center;
+align-items: center;
+margin:20px auto 20px auto
+}
+
+.feature-items{
+    display: flex;
+    gap:40px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.webdev{
+    background: var(--bg-01);
+}
+.data-analytics{
+    background:var(--bg-02) ;
+}
+
+.feature-item {
+    padding: 30px;
+    border-radius: 20px;
+  box-shadow: 2px 0px 5px 0px rgb(0 0 0 / 10%);  
+}
+.profile{
+background:var(--bg-03);
+}
+.support{
+    background-color:var(--bg-04) ;
+}
+.feature-content p{
+    font-size: 0.8rem;
+}
